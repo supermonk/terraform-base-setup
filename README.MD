@@ -10,11 +10,15 @@ Three Step Process [Any shorter will make things complicated]
     b.access-flow-bucket-tt
         i. make sure Logging ACL is enabled
         ii. make sure you have replica and version enabled.
+    - manual
 2. Brain of the Project
     a. S3 Buckets which are needed
         i. vpc Log flow Bucket
         ii. Access Log
+    - link: https://github.com/supermonk/terraform-base-setups
 3. Everything else
+    - link: https://github.com/supermonk/terraform-helloworld
+
 ```
 ## Details
 ```text
@@ -27,4 +31,15 @@ Three Step Process [Any shorter will make things complicated]
 ```
 
 
-terraform output -module=TF_Module_S3_VPC_Bucket
+## Steps for this project
+
+```bash
+terraform init
+terraform apply
+terraform destroy
+```
+
+## Good commands
+
+1. terraform state list
+2. terraform state show <>
