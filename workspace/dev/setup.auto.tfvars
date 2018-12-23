@@ -1,0 +1,6 @@
+aws_region = "us-west-1"
+aws_replica_region = "us-west-2"
+aws_profile = "tp"
+terraform_vpc_bucket_name = "vpc-flow"
+terraform_artifact_log_bucket_name="artifact"
+env = "tt"

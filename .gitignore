@@ -1,0 +1,6 @@
+iterraform-helloworld.iml
+*.iml
+.idea
+idea*
+workspace/*/terraform.tfstate.backup
+workspace/*/.terraform*
