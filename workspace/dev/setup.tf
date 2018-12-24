@@ -12,6 +12,8 @@ terraform {
     profile        = "tp"
   }
 }
+
+# s3 buckets
 module "TF_Module_S3_VPC_Bucket" {
   source = "../../terraform-code/terraform-aws-s3-buckets/"
   name  = "${var.terraform_vpc_bucket_name}-${var.env}"
@@ -22,6 +24,16 @@ module "TF_Module_S3_ARTIFACT_Bucket" {
   name  = "${var.terraform_artifact_log_bucket_name}-${var.env}"
   region = "${var.aws_region}"
 }
+
+output "vpc_s3_log" {
+  value = "${module.TF_Module_S3_VPC_Bucket.s3arn}"
+}
+output "artifact_s3_bucket" {
+  value = "${module.TF_Module_S3_ARTIFACT_Bucket.s3arn}"
+}
+
+
+# Key pair
 
 module "TF_Module_ANALYTICS_KEYPAIR" {
   source = "../../terraform-code/terraform-aws-keypair/"
@@ -43,10 +55,6 @@ module "TF_Module_DB_KEYPAIR" {
   project = "${var.project}"
   env = "${var.env}"
   name = "${var.db_key_pair_name}"
-}
-
-output "vpc_s3_log" {
-  value = "${module.TF_Module_S3_VPC_Bucket.s3arn}"
 }
 
 output "key_pair_db_name" {
