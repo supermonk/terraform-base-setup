@@ -1,3 +1,5 @@
+workspace/dev/keypair/*
+workspace/dev/keypair
 iterraform-helloworld.iml
 *.iml
 .idea

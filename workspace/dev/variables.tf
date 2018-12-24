@@ -16,3 +16,16 @@ variable "env" {
 variable "aws_replica_region" {
   type = "string"
 }
+
+variable "project" {
+  type = "string"
+}
+variable "db_key_pair_name" {
+  type = "string"
+}
+variable "analytics_key_pair_name" {
+  type = "string"
+}
+variable "ec2_key_pair_name" {
+  type = "string"
+}

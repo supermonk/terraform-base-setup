@@ -4,3 +4,9 @@ aws_profile = "tp"
 terraform_vpc_bucket_name = "vpc-flow"
 terraform_artifact_log_bucket_name="artifact"
 env = "tt"
+
+
+project = "test"
+analytics_key_pair_name = "analytics"
+db_key_pair_name = "db"
+ec2_key_pair_name = "ec2"
